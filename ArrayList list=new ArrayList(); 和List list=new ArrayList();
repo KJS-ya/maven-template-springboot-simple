@@ -1,0 +1,18 @@
+对于
+ArrayList list=new ArrayList();
+List list=new ArrayList();
+
+向上转型(声明使用父类)：子类对象会遗失与父类不同的方法
+
+向下转型：可以调用子类那些特有的方法，重新获得丢失的子类特有方法<泛型是常用>
+
+第一种形式用当前类作为引用类型，那么可以访问到ArrayList这个类中的所有公用方法。
+
+第二种形式，用ArrayList实现的接口List作为引用类型，那么通过list引用可以访问到接口中定义的方法。
+
+也就是说ArrayList这个类实现了List接口，除了要必须实现接口List中声明的方法外，还可以实现额外的一些方法。
+
+但是，第二种形式就无法调用的List接口以外的方法。
+使用上，设计模式中有：“代码尽量依赖于抽象，不依赖于具体”。第一种形式就是依赖具体，第二种形式就是依赖于抽象。因为List是接口。代码依赖于抽象的好处是，代码可以方便替换。
+
+例如:代码List list = new ArrayList();下面通过list来操作集合。代码编写后发现集合使用的不准确，应该使用LinkedList，那么只要修改一行代码List list = new LinkedList();就可以，这行以后的代码不需要修改，因为List接口保证了调用的都是接口中的方法，而ArrayList与LinkedList都实现了List接口。而如果当时用ArrayList list = new ArrayList()这种形式的话，那么list访问到的就可能是ArrayList里独有的方法而非List接口中的方法。这样替换成LinkedList的时候就有可能需要修改很多的代码。

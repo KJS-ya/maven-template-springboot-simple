@@ -1,4 +1,4 @@
-package org.example.java.java_collection.add.add;
+package org.example.java.java_collection.add;
 
 import java.util.Arrays;
 

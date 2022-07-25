@@ -1,8 +1,8 @@
-package org.example.java.java_collection.add.add;
+package org.example.java.java_collection.add;
 
 import java.util.Arrays;
 
-import static org.example.java.java_collection.add.add.AdeElement.Demo.appendToArray;
+import static org.example.java.java_collection.add.AdeElement.Demo.appendToArray;
 
 /**
  * 数组是 Java 中类似对象的固定大小集合。ArrayList 与数组非常相似，但没有大小限制。
